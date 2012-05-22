@@ -3,6 +3,7 @@
   <head>
 	<title><%= title %></title>
 	<%= stylesheet_link_tag    "application",                       :media => "all" %>
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tag %>
 	<!--[if lt IE 9]>
@@ -13,8 +14,8 @@
   	<div class="container">
   	  <header>
         <%= image_tag("logo.png", :alt => "Honey-Do-List", :class => "round") %>
-        <nav> 
-          <ul class="round">
+        <nav class="round"> 
+          <ul>
           	<li><%= link_to "Home", '#' %></li>
             <li><%= link_to "Help", '#' %></li>
           	<li><%= link_to "Sign in", '#' %></li>
