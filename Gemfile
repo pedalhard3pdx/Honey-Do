@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-
+ruby '1.9.2'
 gem 'rails', '3.1.1'
 
 gem 'sqlite3', '1.3.4', :group => :development
