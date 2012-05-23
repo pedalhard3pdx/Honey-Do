@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
-ruby '1.9.2'
-gem 'rails', '3.1.1'
 
-gem 'sqlite3', '1.3.4', :group => :development
-gem 'pg',               :group => :production 
-gem 'jquery-rails'
+  gem 'rails', '3.1.1'
+
+  gem 'sqlite3', '1.3.4', :group => :development
+  gem 'pg',               :group => :production 
+  
 
 
 group :development do
@@ -27,6 +27,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  gem 'jquery-rails'
+end
 
 
   
