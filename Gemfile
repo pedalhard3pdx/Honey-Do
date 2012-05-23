@@ -3,6 +3,9 @@ ruby '1.9.2'
 gem 'rails', '3.1.1'
 
 gem 'sqlite3', '1.3.4', :group => :development
+gem 'pg',               :group => :production 
+gem 'jquery-rails'
+
 
 group :development do
   gem 'rspec-rails', '2.6.1'
@@ -24,7 +27,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-group :production do
-  gem 'pg'
-end
+
+
+  
+
