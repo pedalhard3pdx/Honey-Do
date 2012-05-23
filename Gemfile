@@ -12,6 +12,7 @@ group :development do
   gem 'autotest'
   gem 'growl'
   gem 'autotest-fsevent'
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
 
