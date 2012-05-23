@@ -21,6 +21,9 @@ section {
 	padding:20px;
 	background: #fff;
 }
+section h1 {
+	font-size: 200%;
+}
 
 /*Links*/
 
@@ -34,9 +37,9 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:visited {
+/*a:visited {
 	color: #069;
-}
+}*/
 
 /*Navigation*/
 
@@ -64,6 +67,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+	color: #00ff00;
 	text-decoration: underline;
 }
 
