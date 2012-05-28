@@ -53,6 +53,7 @@ GEM
       factory_girl (~> 1.3)
       rails (>= 3.0.0.beta4)
     ffi (1.0.11)
+    gravatar_image_tag (1.0.0.pre2)
     growl (1.0.3)
     hike (1.2.1)
     i18n (0.6.0)
@@ -146,6 +147,7 @@ DEPENDENCIES
   autotest-fsevent
   coffee-rails (~> 3.1.1)
   factory_girl_rails (= 1.0)
+  gravatar_image_tag (= 1.0.0.pre2)
   growl
   jquery-rails
   pg
