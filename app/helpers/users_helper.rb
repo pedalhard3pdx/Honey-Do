@@ -4,4 +4,15 @@ module UsersHelper
 								              :class => 'gravatar',
 								              :gravatar => options)
 	end
+	# def title
+	# base_title = "Honey-Do-List"
+	# if @title.nil?
+	#   base_title
+	# else
+	#   "#{base_title} |  #{@title}"
+	# end
+ #  end
+ #  def logo
+ #  	image_tag("logo.png", :alt => "Honey-Do-List", :class => "round")
+ #  end
 end
