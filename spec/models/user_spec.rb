@@ -146,7 +146,7 @@ describe User do
        User.authenticate("bar@foo.com", @attr[:password]).should be_nil
       end
 
-      it "should return the user on email/assword match" do
+      it "should return the user on email/password match" do
         User.authenticate(@attr[:email],@attr[:password]).should == @user
       end
       
