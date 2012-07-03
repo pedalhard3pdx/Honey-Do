@@ -1,4 +1,4 @@
-require 'spec_helper'
+ require 'spec_helper'
 
 describe "LayoutLinks" do
 
@@ -77,8 +77,11 @@ describe "LayoutLinks" do
                                          :content => "Profile")
     end
       
-
-    
+    it "should have a settings link" do
+      visit root_path
+      response.should have_selector("a", :href => edit_user_path(@user),
+                                         :content => "Settings")
+    end
   end
 end
 
