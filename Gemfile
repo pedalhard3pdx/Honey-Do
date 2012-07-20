@@ -5,7 +5,7 @@ source 'http://rubygems.org'
   gem 'sqlite3', '1.3.4', :group => :development
   gem 'pg',               :group => :production 
   gem 'gravatar_image_tag', '1.0.0.pre2'
-
+  gem 'will_paginate', '3.0.pre2'
 
 
 group :development do
@@ -14,6 +14,7 @@ group :development do
   gem 'growl'
   gem 'autotest-fsevent'
   gem 'annotate', '~> 2.4.1.beta'
+  gem 'faker', '0.3.1'
 end
 
 
