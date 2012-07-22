@@ -14,7 +14,7 @@ group :development do
   gem 'growl'
   gem 'autotest-fsevent'
   gem 'annotate', '~> 2.4.1.beta'
-  gem 'faker', '0.3.1'
+  gem 'faker', '0.3.1', :require => false
 end
 
 
