@@ -7,7 +7,7 @@ body {
 }
 
 header {
-	padding: 20px;
+	padding: 10px;
 }
 
 header img {
@@ -181,3 +181,10 @@ div.field,div.action {
 }
 
 
+ul.users {
+	margin-top: 1em;
+}
+
+ul.users li {
+	list-style: none;
+}
