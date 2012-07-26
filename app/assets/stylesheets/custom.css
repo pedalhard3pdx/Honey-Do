@@ -1,10 +1,14 @@
+body { 
+	background-image: url(/assets/grass_HDL.jpg); 
+	
+}
 .container {
 	width: 710px;
 }
 
-body {
+/*body {
 	background: #FFFF00;
-}
+}*/
 
 header {
 	padding: 10px;
