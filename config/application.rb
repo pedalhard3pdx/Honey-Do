@@ -50,5 +50,8 @@ module HoneyDo
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Change the ath that assers are served from
+    # config.assets.prefix = "/assets"
   end
 end
