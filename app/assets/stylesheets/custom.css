@@ -1,5 +1,5 @@
 body { 
-	background-image: url(<%= asset_path 'grass_HDL.jpg' %>) 
+	background-image: url('/assets/grass_HDL.jpg'); 
 }
 .container {
 	width: 710px;
