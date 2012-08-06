@@ -24,5 +24,8 @@ class List < ActiveRecord::Base
 
     belongs_to :user 
 
+    validates :list_name, :presence => true
+    validates :user_id, :presence => true
+
     default_scope :order => 'lists.created_at DESC'
 end

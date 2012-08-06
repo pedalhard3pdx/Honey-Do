@@ -28,6 +28,17 @@ describe List do
   	  @list.user.should == @user
   	end
   end
+
+  describe "validations" do
+    
+    it "should have a user id" do
+      List.new(@attr).should_not be_valid
+    end
+
+    it "should reject nonblank content" do
+      @user.lists.build(:list_name => "     ").should_not be_valid
+    end
+  end
 end
 
 
