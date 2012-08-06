@@ -30,6 +30,7 @@
   end
 
   def edit
+    @user = User.find(params[:id])
     @title = "Edit user"
   end
 
@@ -46,7 +47,7 @@
   def destroy
     # User.find(params[:id]).destroy
     # redirect_to users_path, :flash => { :success => "User destroyed." }
-    User.find(params[:id]).destroy
+    @user.destroy
     flash[:success] = "User destroyed."
     redirect_to users_path
   end
@@ -63,8 +64,8 @@
     end
 
     def admin_user
-      user = User.find(params[:id])
-      redirect_to(root_path) if !current_user.admin? || current_user?(user)        
+      @user = User.find(params[:id])
+      redirect_to(root_path) if !current_user.admin? || current_user?(@user)        
     end
       
       

@@ -1,4 +1,6 @@
 require 'spec_helper'
+# require 'factory_girl_rails'
+# Factory.find_definitions
 
 describe User do
 
@@ -172,21 +174,33 @@ describe User do
       @user.should be_admin
     end
   end
+
+  describe "lists associations" do
+    
+    before(:each) do
+      @user = User.create(@attr)
+       # @mp1 = @user.List.new(list_name: "Groceries", list_item1: "Milk", list_item2: "Bread", list_item3: "Cheese", list_item4: "Beer", list_item5: "Butter",  created_at: (1.day.ago))
+       # @mp2 = User.List.new(list_name: "Shopping", list_item1: "Meat", list_item2: "Veggies", list_item3: "Bread", list_item4: "Wine", list_item5: "Cheese",  created_at: (1.hour.ago))
+    end
+
+    it "should have a lists attribute" do
+      @user.should respond_to(:lists)
+    end
+
+    # it "should have the right lists in the right order" do
+    #   @user.lists.should === [@mp2, @mp1]
+    # end
+
+    it "should destroy associated lists" do
+      @user.destroy
+      [@mp1, @mp2].each do |list|
+        List.find_by_id(object_id).should be_nil
+      end
+    end
+  end
 end
 
 
 
-# == Schema Information
-#
-# Table name: users
-#
-#  id                 :integer         not null, primary key
-#  name               :string(255)
-#  email              :string(255)
-#  created_at         :datetime
-#  updated_at         :datetime
-#  encrypted_password :string(255)
-#  salt               :string(255)
-#  admin              :boolean         default(FALSE)
-#
+
 

@@ -11,7 +11,7 @@ source 'http://rubygems.org'
 group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'autotest'
-  gem 'growl'
+  gem 'autotest-growl'
   gem 'autotest-fsevent'
   gem 'annotate', '~> 2.4.1.beta'
   gem 'faker', '0.3.1', :require => false
