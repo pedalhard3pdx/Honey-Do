@@ -1,0 +1,19 @@
+<%= form_for(List.new) do |f| %>
+  <div class="field">
+  	List name <%= f.text_field :list_name %><br />
+  	List item <%= f.text_field :list_item1 %><br />
+  	List item <%= f.text_field :list_item2 %><br />
+  	List item <%= f.text_field :list_item3 %><br />
+  	List item <%= f.text_field :list_item4 %><br />
+  	List item <%= f.text_field :list_item5 %><br />
+  	List item <%= f.text_field :list_item6 %><br />
+  	List item <%= f.text_field :list_item7 %><br />
+  	List item <%= f.text_field :list_item8 %><br />
+  	List item <%= f.text_field :list_item9 %><br />
+  	List item <%= f.text_field :list_item10 %><br />
+  </div>
+  <div class="actions">
+  	<%= f.submit "Submit" %>
+  </div>
+
+<% end %>

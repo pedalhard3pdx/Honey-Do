@@ -14,3 +14,9 @@ Factory.sequence :email do |n|
 end
 
 
+Factory.define :list do |list|
+  list.list_name   "Groceries"
+  list.list_item1  "Milk"
+  list.list_item2  "Bread"
+  list.association :user
+end

@@ -138,6 +138,7 @@ td.sidebar {
 
 div.field,div.action {
 	margin-bottom:10px; 
+	text-align: center;
 }
 
 /*Error messages*/
@@ -190,4 +191,74 @@ ul.users {
 
 ul.users li {
 	list-style: none;
+}
+
+div.centered {
+    text-align: center
+}
+
+div.centered table {
+	margin: 0 auto;
+	text-align: center;
+}
+
+div.centered td {
+	text-align: center;
+	padding: 1em;
+}
+
+h1.list {
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+
+/*table.lists {
+  margin-top: 1em;
+}
+
+table.lists tr {
+  height: 70px;
+}
+
+table.lists tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}*/
+
+/*table.lists tr td.list {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}*/
+
+table.lists tr td.list span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+div.user_info a {
+  text-decoration: none;
+}
+
+div.user_info span.user_name {
+  position: absolute;
+}
+
+div.user_info span.lists {
+  font-size: 80%;
+}
+
+form.new_list {
+  margin-bottom: 2em;
+}
+
+form.new_list textarea {
+  height: 4em;
+  margin-bottom: 0;
 }

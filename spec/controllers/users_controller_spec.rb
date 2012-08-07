@@ -94,13 +94,34 @@ describe UsersController do
     it "should have a profile image" do
       get :show, :id => @user
       response.should have_selector('h1>img', :class => "gravatar")
-    end
+    end 
 
     it "should have the right URL" do
       get :show, :id => @user
       response.should have_selector('td>a', :content => user_path(@user),
                                             :href    => user_path(@user))
     end
+
+    # it "should show the user's lists" do
+    #   more = Factory(:list, :user => @user, :list_name => "Groceries", :list_item1 => "Milk")
+    #   more = Factory(:list, :user => @user, :list_name => "Chores", :list_item1 => "Mow lawn")
+    #   get :show, :id => @user
+    #   response.should have_selector('span.content', :content => more.list_name)
+    #   response.should have_selector('span.content', :content => more.list_name)
+    # end
+
+    # it "should paginate lists" do
+    #   35.times {Factory(:list, :user => @user, :list_name => "Groceries")}
+    #   get :show, :id => @user
+    #   response.should have_selector('div.pagination')
+    # end
+
+    # it "should display the list count" do
+    #   10.times {Factory(:list, :user => @user, :list_name => "Groceries")}
+    #   get :show, :id => @user
+    #   response.should have_selector('td.sidebar',
+    #                                 :content => @user.lists.count).to_s
+    # end
   end
 
   describe "GET 'new'" do

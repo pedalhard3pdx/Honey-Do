@@ -10,6 +10,7 @@
 
   def show
   	@user = User.find(params[:id])
+    @lists = @user.lists.paginate(:page => params[:page])
   	@title = @user.name
   end
 
@@ -53,10 +54,6 @@
   end
 
   private
-
-    def authenticate
-      deny_access unless signed_in?
-    end
 
     def correct_user
       @user = User.find(params[:id])

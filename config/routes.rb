@@ -2,6 +2,7 @@ HoneyDo::Application.routes.draw do
   
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :lists,    :only => [:create, :destroy]
 
   root :to => 'pages#home'
 
