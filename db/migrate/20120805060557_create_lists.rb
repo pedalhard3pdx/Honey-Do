@@ -16,6 +16,6 @@ class CreateLists < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :lists, :user_id
+    add_index :lists, [:user_id, :created_at]
   end
 end

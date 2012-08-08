@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
   	@title = "Home"
-    @list = List.new if signed_in?
+    @list = current_user.lists.build if signed_in?
   end
 
   def contact

@@ -138,7 +138,7 @@ td.sidebar {
 
 div.field,div.action {
 	margin-bottom:10px; 
-	text-align: center;
+	
 }
 
 /*Error messages*/
@@ -193,26 +193,13 @@ ul.users li {
 	list-style: none;
 }
 
-div.centered {
-    text-align: center
-}
-
-div.centered table {
-	margin: 0 auto;
-	text-align: center;
-}
-
-div.centered td {
-	text-align: center;
-	padding: 1em;
-}
 
 h1.list {
   margin-bottom: 0.3em;
   text-align: center;
 }
 
-/*table.lists {
+table.lists {
   margin-top: 1em;
 }
 
@@ -224,13 +211,13 @@ table.lists tr td.gravatar {
   border-top: 1px solid #ccc;
   vertical-align: top;
   width: 50px;
-}*/
+}
 
-/*table.lists tr td.list {
+table.lists tr td.list {
   border-top: 1px solid #ccc;
   vertical-align: top;
   padding-top: 10px;
-}*/
+}
 
 table.lists tr td.list span.timestamp {
   display: block;

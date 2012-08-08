@@ -1,4 +1,5 @@
-<%= form_for(List.new) do |f| %>
+<%= form_for (@list) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
   <div class="field">
   	List name <%= f.text_field :list_name %><br />
   	List item <%= f.text_field :list_item1 %><br />
@@ -12,8 +13,5 @@
   	List item <%= f.text_field :list_item9 %><br />
   	List item <%= f.text_field :list_item10 %><br />
   </div>
-  <div class="actions">
-  	<%= f.submit "Submit" %>
-  </div>
-
+  	<%= f.submit "Create" %>
 <% end %>

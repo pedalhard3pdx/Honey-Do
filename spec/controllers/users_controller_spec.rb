@@ -102,26 +102,26 @@ describe UsersController do
                                             :href    => user_path(@user))
     end
 
-    # it "should show the user's lists" do
-    #   more = Factory(:list, :user => @user, :list_name => "Groceries", :list_item1 => "Milk")
-    #   more = Factory(:list, :user => @user, :list_name => "Chores", :list_item1 => "Mow lawn")
-    #   get :show, :id => @user
-    #   response.should have_selector('span.content', :content => more.list_name)
-    #   response.should have_selector('span.content', :content => more.list_name)
-    # end
+    it "should show the user's lists" do
+      more = Factory(:list, :user => @user, :list_name => "Groceries", :list_item1 => "Milk")
+      more = Factory(:list, :user => @user, :list_name => "Chores", :list_item1 => "Mow lawn")
+      get :show, :id => @user
+      response.should have_selector('span.content', :content => "Groceries")
+      response.should have_selector('span.content', :content => "Chores")
+    end
 
-    # it "should paginate lists" do
-    #   35.times {Factory(:list, :user => @user, :list_name => "Groceries")}
-    #   get :show, :id => @user
-    #   response.should have_selector('div.pagination')
-    # end
+    it "should paginate lists" do
+      35.times {Factory(:list, :user => @user, :list_name => "Groceries")}
+      get :show, :id => @user
+      response.should have_selector('div.pagination')
+    end
 
-    # it "should display the list count" do
-    #   10.times {Factory(:list, :user => @user, :list_name => "Groceries")}
-    #   get :show, :id => @user
-    #   response.should have_selector('td.sidebar',
-    #                                 :content => @user.lists.count).to_s
-    # end
+    it "should display the list count" do
+      10.times {Factory(:list, :user => @user, :list_name => "Groceries")}
+      get :show, :id => @user
+      response.should have_selector('td.sidebar',
+                                    :content => "Lists")
+    end
   end
 
   describe "GET 'new'" do

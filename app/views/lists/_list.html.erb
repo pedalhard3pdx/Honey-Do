@@ -1,8 +1,32 @@
 <tr>
   <td class="list">
-  	<span class="content"><%= list.list_item1 %></span>
+  	<span class="content">
+     <ul>
+       <li><strong><%= list.list_name %></strong> </li> 
+       <li><%= list.list_item1 %> </li> 
+       <li><%= list.list_item2 %> </li> 
+       <li><%= list.list_item3 %> </li> 
+       <li><%= list.list_item4 %> </li> 
+       <li><%= list.list_item5 %> </li> 
+       <li><%= list.list_item6 %> </li> 
+       <li><%= list.list_item7 %> </li> 
+       <li><%= list.list_item8 %> </li> 
+       <li><%= list.list_item9 %> </li> 
+       <li><%= list.list_item10 %></li> 
+     </ul>
+    </span>
   	<span class="timestamp">
       Posted <%= time_ago_in_words(list.created_at) %> ago.
   	</span>
   </td>
+  <% user = list.user rescue User.find(list.user_id) %>
+  <% if current_user?(user) %>  
+    <td>
+      <%= button_to "delete", list, :method => :delete, :onclick => "return confirm('You sure?')",
+                                    :title => "Delete #{list.list_name}" %>
+    </td>
+
+  
+
+  <% end %>
 </tr>

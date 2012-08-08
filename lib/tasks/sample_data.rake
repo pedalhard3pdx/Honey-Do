@@ -18,20 +18,15 @@ namespace :db do
                    :password_confirmation => password)
     end
 
-    User.all(:limit => 6).each do |user|
+    users = User.all(limit: 6)
       50.times do
-        user.lists.create!(:list_name => Faker::Lorem.words(2),  
-                           :list_item1 => Faker::Lorem.words(2), 
-                           :list_item2 => Faker::Lorem.words(2), 
-                           :list_item3 => Faker::Lorem.words(2), 
-                           :list_item4 => Faker::Lorem.words(2), 
-                           :list_item5 => Faker::Lorem.words(2), 
-                           :list_item6 => Faker::Lorem.words(2), 
-                           :list_item7 => Faker::Lorem.words(2), 
-                           :list_item8 => Faker::Lorem.words(2), 
-                           :list_item9 => Faker::Lorem.words(2), 
-                           :list_item10 => Faker::Lorem.words(2))
-      end
+        content = Faker::Lorem.sentence(2) 
+        users.each { |user| user.lists.create!(list_name: content, list_item1: content,  
+                                               list_item2: content, list_item3: content,
+                                               list_item4: content, list_item5: content,  
+                                               list_item6: content, list_item7: content,
+                                               list_item8: content, list_item9: content,
+                                               list_item10: content) }
     end
   end
 end

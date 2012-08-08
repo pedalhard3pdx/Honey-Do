@@ -11,6 +11,7 @@
   def show
   	@user = User.find(params[:id])
     @lists = @user.lists.paginate(:page => params[:page])
+    # @list = List.find(params[:id])
   	@title = @user.name
   end
 
